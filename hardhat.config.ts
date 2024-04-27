@@ -1,8 +1,9 @@
 import { HardhatUserConfig } from 'hardhat/config'
-import '@nomicfoundation/hardhat-toolbox-viem'
 import '@nomicfoundation/hardhat-chai-matchers'
+import '@nomicfoundation/hardhat-toolbox'
 import '@nomicfoundation/hardhat-verify'
 import 'hardhat-abi-exporter'
+import 'hardhat-deal'
 import 'dotenv/config'
 
 const config: HardhatUserConfig = {
@@ -19,7 +20,7 @@ const config: HardhatUserConfig = {
     hardhat: {
       forking: {
         url: 'https://rpc.ankr.com/scroll_sepolia_testnet',
-        blockNumber: 4095049,
+        blockNumber: 4103335,
       },
     },
   },
