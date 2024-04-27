@@ -11,11 +11,17 @@ cache:
 
 install_dependencies:
   stage: .pre
+  image: node:lts
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@latest-9 --activate
+    - pnpm config set store-dir .pnpm-store
   script:
     - pnpm install
-  artifacts:
-    paths:
-      - node_modules/
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
 
 lint:
   stage: lint
