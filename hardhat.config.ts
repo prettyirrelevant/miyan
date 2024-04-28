@@ -31,7 +31,7 @@ const config: HardhatUserConfig = {
         chainId: 534351,
         urls: {
           apiURL: 'https://api-sepolia.scrollscan.com/api',
-          browserURL: 'https://sepolia-optimism.etherscan.io/',
+          browserURL: 'https://sepolia.scrollscan.com/',
         },
       },
     ],

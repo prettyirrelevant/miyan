@@ -4,10 +4,12 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "hardhat test",
+    "deploy:p2p": "hardhat ignition deploy ./ignition/modules/Exchange.ts --network scrollSepolia",
+    "deploy:wngn": "hardhat ignition deploy ./ignition/modules/Wngn.ts --network scrollSepolia",
     "format": "prettier --write --plugin=prettier-plugin-solidity .",
     "lint": "solhint 'contracts/**/*.sol'",
     "build": "hardhat compile",
+    "test": "hardhat test",
     "prepare": "husky"
   },
   "keywords": [],
